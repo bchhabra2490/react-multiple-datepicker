@@ -75,7 +75,7 @@ class DatePicker extends Component {
     this.state = {
       view: DateUtilities.clone(def),
       selected: DateUtilities.clone(def),
-      selectedDates: props.selected ? [DateUtilities.clone(def)] : [],
+      selectedDates:props.selectedDates?props.selectedDates:(props.selected ? [DateUtilities.clone(def)] : []),
       minDate: null,
       maxDate: null,
       open: false,
